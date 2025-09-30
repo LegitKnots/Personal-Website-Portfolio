@@ -36,16 +36,16 @@ export default function AboutPage() {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105"
                 >
-                  <Link href="/projects">View My Work</Link>
+                  <Link href="/resume">See Resume</Link>
                 </Button>
-                <Button
+                {/* <Button
                   asChild
                   size="lg"
                   variant="outline"
                   className="hover:bg-primary/10 hover:border-primary transition-all duration-300 bg-transparent"
                 >
                   <Link href="/resume">See Resume</Link>
-                </Button>
+                </Button> */}
               </div>
 
               {/* Social Links */}
