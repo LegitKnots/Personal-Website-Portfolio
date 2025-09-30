@@ -13,10 +13,10 @@ export default function ResumePage() {
               <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-balance">Resume</h1>
               <p className="text-lg text-muted-foreground">My professional experience and qualifications</p>
             </div>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 w-fit">
+            {/* <Button size="lg" className="bg-primary hover:bg-primary/90 w-fit">
               <Download className="mr-2" size={20} />
               Download PDF
-            </Button>
+            </Button> */}
           </div>
 
           {/* Experience Section */}
