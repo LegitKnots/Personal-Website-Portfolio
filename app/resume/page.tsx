@@ -27,6 +27,41 @@ export default function ResumePage() {
             </div>
 
             <div className="space-y-6">
+              {/* DataBank */}
+              <Card className="p-6 hover:border-primary/50 transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground leading-tight">
+                      Data Center Technician
+                    </h3>
+                    <p className="text-primary font-medium">DataBank - Atlanta, GA | On-Site</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
+                    Nov 2025 – Present
+                  </span>
+                </div>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Monitoring data center environmental systems, power distribution, and facility operations to ensure optimal performance.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Assisting with hardware troubleshooting and providing support for server installations and basic maintenance tasks.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Supporting remote hands operations for customers and maintaining compliance with data center procedures and standards.</span>
+                  </li>
+                </ul>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Facilities Monitoring</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Equipment Support</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Data Center Ops</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Troubleshooting</span>
+                </div>
+              </Card>
+
               {/* EchoFives */}
               <Card className="p-6 hover:border-primary/50 transition-colors">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
