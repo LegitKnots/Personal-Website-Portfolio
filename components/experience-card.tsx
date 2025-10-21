@@ -1,0 +1,143 @@
+import React from 'react';
+import { Card } from '@/components/ui/card';
+
+interface BulletPointProps {
+  title: string;
+  dates: string;
+  descriptions: string[];
+  skills: string[];
+}
+
+interface SimpleExperienceProps {
+  title: string;
+  company: string;
+  location: string;
+  dates: string;
+  descriptions: string[];
+  skills: string[];
+}
+
+interface MultiPositionExperienceProps {
+  companyName: string;
+  companyLocation: string;
+  companyDates: string;
+  positions: BulletPointProps[];
+}
+
+// Bullet point component with proper styling
+function PositionItem({ title, dates, descriptions, skills }: BulletPointProps) {
+  return (
+    <div className="relative flex gap-4">
+      <div className="relative flex-shrink-0 w-4 flex flex-col items-center">
+        <div className="relative w-2 h-2 rounded-full bg-primary z-10 mt-[0.475rem] flex-shrink-0"></div>
+        <div className="w-px flex-1 bg-muted-foreground/30"></div>
+      </div>
+      <div className="flex-1 min-w-0 pb-0">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-3">
+          <div>
+            <h4 className="text-lg font-semibold text-foreground leading-tight">
+              {title}
+            </h4>
+          </div>
+          <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
+            {dates}
+          </span>
+        </div>
+        <ul className="space-y-2 text-muted-foreground mb-4">
+          {descriptions.map((desc, index) => (
+            <li key={index} className="flex items-center gap-2">
+              <span className="text-primary flex-shrink-0">•</span>
+              <span>{desc}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <span key={index} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Simple experience card (single position)
+export function SimpleExperienceCard({
+  title,
+  company,
+  location,
+  dates,
+  descriptions,
+  skills,
+}: SimpleExperienceProps) {
+  return (
+    <Card className="p-6 hover:border-primary/50 transition-colors">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
+        <div>
+          <h3 className="text-xl font-semibold text-foreground leading-tight">
+            {title}
+          </h3>
+          <p className="text-primary font-medium">{company} - {location}</p>
+        </div>
+        <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
+          {dates}
+        </span>
+      </div>
+      <ul className="space-y-2 text-muted-foreground">
+        {descriptions.map((desc, index) => (
+          <li key={index} className="flex items-center gap-2">
+            <span className="text-primary flex-shrink-0">•</span>
+            <span>{desc}</span>
+          </li>
+        ))}
+      </ul>
+      <div className="flex flex-wrap gap-2 mt-4">
+        {skills.map((skill, index) => (
+          <span key={index} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </Card>
+  );
+}
+
+// Multi-position experience card (company with multiple positions)
+export function MultiPositionExperienceCard({
+  companyName,
+  companyLocation,
+  companyDates,
+  positions,
+}: MultiPositionExperienceProps) {
+  return (
+    <Card className="p-6 hover:border-primary/50 transition-colors">
+      {/* Company Header */}
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-6">
+        <div>
+          <h3 className="text-xl font-semibold text-foreground leading-tight">
+            {companyName}
+          </h3>
+          <p className="text-primary font-medium">{companyLocation}</p>
+        </div>
+        <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
+          {companyDates}
+        </span>
+      </div>
+
+      {/* Positions */}
+      <div className="space-y-6">
+        {positions.map((position, index) => (
+          <PositionItem
+            key={index}
+            title={position.title}
+            dates={position.dates}
+            descriptions={position.descriptions}
+            skills={position.skills}
+          />
+        ))}
+      </div>
+    </Card>
+  );
+}
