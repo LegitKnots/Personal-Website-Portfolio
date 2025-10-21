@@ -116,51 +116,51 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-foreground mb-4">
                   What I'm Into
                 </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3 group">
-                    <span className="text-primary mt-1 group-hover:scale-110 transition-transform duration-300">
-                      ▸
-                    </span>
-                    <span>
-                      Developing scalable web applications with modern
-                      frameworks
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 group">
-                    <span className="text-primary mt-1 group-hover:scale-110 transition-transform duration-300">
-                      ▸
-                    </span>
-                    <span>
-                      Running and maintaining homelab servers and infrastructure
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 group">
-                    <span className="text-primary mt-1 group-hover:scale-110 transition-transform duration-300">
-                      ▸
-                    </span>
-                    <span>
-                      Exploring networking, virtualization, and containerization
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 group">
-                    <span className="text-primary mt-1 group-hover:scale-110 transition-transform duration-300">
-                      ▸
-                    </span>
-                    <span>
-                      Continuously learning new technologies and improving my
-                      craft
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 group">
-                    <span className="text-primary mt-1 group-hover:scale-110 transition-transform duration-300">
-                      ▸
-                    </span>
-                    <span>
-                      Riding and working on motorcycles, with a focus on
-                      mechanics and performance
-                    </span>
-                  </li>
-                </ul>
+                 <ul className="space-y-3">
+                   <li className="flex items-start gap-3 group">
+                     <span className="text-primary group-hover:scale-110 transition-transform duration-300">
+                       ▸
+                     </span>
+                     <span>
+                       Developing scalable web applications with modern
+                       frameworks
+                     </span>
+                   </li>
+                   <li className="flex items-start gap-3 group">
+                     <span className="text-primary group-hover:scale-110 transition-transform duration-300">
+                       ▸
+                     </span>
+                     <span>
+                       Running and maintaining homelab servers and infrastructure
+                     </span>
+                   </li>
+                   <li className="flex items-start gap-3 group">
+                     <span className="text-primary group-hover:scale-110 transition-transform duration-300">
+                       ▸
+                     </span>
+                     <span>
+                       Exploring networking, virtualization, and containerization
+                     </span>
+                   </li>
+                   <li className="flex items-start gap-3 group">
+                     <span className="text-primary group-hover:scale-110 transition-transform duration-300">
+                       ▸
+                     </span>
+                     <span>
+                       Continuously learning new technologies and improving my
+                       craft
+                     </span>
+                   </li>
+                   <li className="flex items-start gap-3 group">
+                     <span className="text-primary group-hover:scale-110 transition-transform duration-300">
+                       ▸
+                     </span>
+                     <span>
+                       Riding and working on motorcycles, with a focus on
+                       mechanics and performance
+                     </span>
+                   </li>
+                 </ul>
               </div>
 
               <div className="pt-6">
