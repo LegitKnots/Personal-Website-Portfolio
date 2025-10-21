@@ -1,5 +1,5 @@
 import { ExperienceCard } from "@/components/experience-card";
-import { DetailedSkillCard } from "@/components/detailed-skill-card";
+import { SkillCard } from "@/components/skill-card";
 import { EducationCard } from "@/components/education-card";
 import { Briefcase, GraduationCap, Wrench } from "lucide-react";
 
@@ -151,27 +151,27 @@ export default function ResumePage() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              <DetailedSkillCard
+              <SkillCard
                 title="Server Hardware"
                 description="Building, upgrading, and maintaining reliable server systems for both production and lab environments."
               />
-              <DetailedSkillCard
+              <SkillCard
                 title="Racking & Cabling"
                 description="Organizing rack layouts and structured cabling for efficient, scalable, and professional data center setups."
               />
-              <DetailedSkillCard
+              <SkillCard
                 title="Troubleshooting"
                 description="Diagnosing and resolving hardware, software, and network issues under pressure to minimize downtime."
               />
-              <DetailedSkillCard
+              <SkillCard
                 title="Networking & Security"
                 description="Configuring switches, firewalls, and secure VPNs to ensure performance, reliability, and protection."
               />
-              <DetailedSkillCard
+              <SkillCard
                 title="Virtualization"
                 description="Deploying and managing virtual machines and clusters for efficient resource utilization and flexibility."
               />
-              <DetailedSkillCard
+              <SkillCard
                 title="Monitoring"
                 description="Implementing system and network monitoring to detect issues early and maintain high availability."
               />
