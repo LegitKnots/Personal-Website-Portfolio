@@ -1,4 +1,4 @@
-import { SimpleExperienceCard, MultiPositionExperienceCard } from "@/components/experience-card";
+import { ExperienceCard } from "@/components/experience-card";
 import { DetailedSkillCard } from "@/components/detailed-skill-card";
 import { EducationCard } from "@/components/education-card";
 import { Briefcase, GraduationCap, Wrench } from "lucide-react";
@@ -29,7 +29,7 @@ export default function ResumePage() {
 
             <div className="space-y-6">
               {/* DataBank */}
-              <SimpleExperienceCard
+              <ExperienceCard
                 title="Data Center Technician"
                 company="DataBank"
                 location="Atlanta, GA | On-Site"
@@ -43,10 +43,10 @@ export default function ResumePage() {
               />
 
               {/* EchoFives */}
-              <MultiPositionExperienceCard
-                companyName="EchoFives, LLC"
-                companyLocation="Atlanta, GA | Hybrid"
-                companyDates="Sep 2025 – Present"
+              <ExperienceCard
+                company="EchoFives, LLC"
+                location="Atlanta, GA | Hybrid"
+                dates="Sep 2025 – Present"
                 positions={[
                   {
                     title: "Lead of Software Operations",
@@ -70,10 +70,10 @@ export default function ResumePage() {
               />
 
               {/* CycleGear */}
-              <MultiPositionExperienceCard
-                companyName="CycleGear"
-                companyLocation="Smyrna, GA"
-                companyDates="May 2025 – Present"
+              <ExperienceCard
+                company="CycleGear"
+                location="Smyrna, GA"
+                dates="May 2025 – Present"
                 positions={[
                   {
                     title: "Key Holder",
@@ -97,7 +97,7 @@ export default function ResumePage() {
               />
 
               {/* West Chatham Warning Devices */}
-              <SimpleExperienceCard
+              <ExperienceCard
                 title="Installation Technician"
                 company="West Chatham Warning Devices"
                 location="Alpharetta, GA"
@@ -111,7 +111,7 @@ export default function ResumePage() {
               />
 
               {/* AJP Networks */}
-              <SimpleExperienceCard
+              <ExperienceCard
                 title="Chief Executive Officer | Software Development & Operations"
                 company="AJP Networks"
                 location="Atlanta, GA | Hybrid"
