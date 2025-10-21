@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="en" className="dark bg-background">
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased bg-background`}>
         <Suspense fallback={<div>Loading...</div>}>
           <Navigation />
           <main className="min-h-screen">{children}</main>
