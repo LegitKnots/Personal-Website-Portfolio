@@ -1,13 +1,16 @@
 import { ExperienceCard } from "@/components/experience-card";
 import { SkillCard } from "@/components/skill-card";
 import { EducationCard } from "@/components/education-card";
+import { Footer } from "@/components/footer";
 import { Briefcase, GraduationCap, Wrench } from "lucide-react";
 
 export default function ResumePage() {
   return (
     <div className="pt-16">
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute -top-1/2 -left-1/2 w-3/4 h-3/4 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-12 animate-fade-in-up">
             <div>
@@ -179,6 +182,7 @@ export default function ResumePage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

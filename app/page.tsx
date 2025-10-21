@@ -1,14 +1,17 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SkillCard } from "@/components/skill-card";
+import { Footer } from "@/components/footer";
 import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-16 relative overflow-hidden">
+      {/* Gradient glow for Hero section */}
+      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl pointer-events-none transform -translate-x-1/4 -translate-y-1/2"></div>
+
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 pointer-events-none" />
+      <section className="min-h-[90vh] flex items-center relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="max-w-4xl">
             <div className="space-y-6">
@@ -83,8 +86,8 @@ export default function AboutPage() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-card/30 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
             <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-balance text-foreground">
               About Me
@@ -183,9 +186,12 @@ export default function AboutPage() {
         </div>
       </section>
 
+{/* Gradient glow spanning About and Skills sections */}
+<div className="absolute right-0 w-full h-[120vh] bg-primary/10 rounded-full blur-3xl pointer-events-none" style={{ top: '120vh' }}></div>
+
 {/* Skills Section */}
-<section className="py-20">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section className="py-20 relative">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div className="max-w-4xl">
       <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-balance text-foreground">
         Skills & Technologies
@@ -221,6 +227,7 @@ export default function AboutPage() {
   </div>
 </section>
 
+      <Footer />
     </div>
   );
 }
