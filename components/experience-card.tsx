@@ -45,8 +45,8 @@ function PositionItem({ title, dates, descriptions, skills }: BulletPointProps) 
         </div>
         <ul className="space-y-2 text-muted-foreground mb-4">
           {descriptions.map((desc, index) => (
-            <li key={index} className="flex items-center gap-2">
-              <span className="text-primary flex-shrink-0">•</span>
+            <li key={index} className="flex items-start gap-2">
+              <span className="text-primary flex-shrink-0 mt-[0rem]">•</span>
               <span>{desc}</span>
             </li>
           ))}
@@ -87,8 +87,8 @@ export function SimpleExperienceCard({
       </div>
       <ul className="space-y-2 text-muted-foreground">
         {descriptions.map((desc, index) => (
-          <li key={index} className="flex items-center gap-2">
-            <span className="text-primary flex-shrink-0">•</span>
+          <li key={index} className="flex items-start gap-2">
+            <span className="text-primary flex-shrink-0 mt-[0rem]">•</span>
             <span>{desc}</span>
           </li>
         ))}
