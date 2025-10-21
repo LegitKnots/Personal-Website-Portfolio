@@ -76,7 +76,7 @@ export default function ResumePage() {
                 companyDates="May 2025 – Present"
                 positions={[
                   {
-                    title: "Key Holder | CycleGear",
+                    title: "Key Holder",
                     dates: "Sep 2025 – Present",
                     descriptions: [
                       "Performed key holder responsibilities including opening/closing procedures, cash handling, and store security.",
@@ -85,7 +85,7 @@ export default function ResumePage() {
                     skills: ["Leadership", "Store Operations"]
                   },
                   {
-                    title: "Sales Associate | CycleGear",
+                    title: "Sales Associate",
                     dates: "May 2025 – Present",
                     descriptions: [
                       "Provided customer service and sales support specializing in motorcycle gear and accessories.",
