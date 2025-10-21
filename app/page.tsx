@@ -38,14 +38,14 @@ export default function AboutPage() {
                 >
                   <Link href="/resume">See Resume</Link>
                 </Button>
-                {/* <Button
+                <Button
                   asChild
                   size="lg"
                   variant="outline"
                   className="hover:bg-primary/10 hover:border-primary transition-all duration-300 bg-transparent"
                 >
-                  <Link href="/resume">See Resume</Link>
-                </Button> */}
+                  <Link href="/projects">View Projects</Link>
+                </Button>
               </div>
 
               {/* Social Links */}

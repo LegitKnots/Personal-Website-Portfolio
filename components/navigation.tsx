@@ -9,7 +9,7 @@ import { useState } from "react"
 const navItems = [
   { href: "/", label: "About" },
   { href: "/resume", label: "Resume" },
-  //{ href: "/projects", label: "Projects" },
+  { href: "/projects", label: "Projects" },
 ]
 
 export function Navigation() {
