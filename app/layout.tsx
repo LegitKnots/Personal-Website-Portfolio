@@ -8,14 +8,21 @@ import { Navigation } from "@/components/navigation"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alexphillipson.com"),
   title: {
     default: "Alexander Phillipson | Software Engineer & Hardware Enthusiast",
     template: "%s | Alexander Phillipson",
   },
   description: "Software engineer specializing in full-stack development, cloud infrastructure, and network architecture. Explore my projects, experience, and technical expertise.",
-  keywords: ["Software Engineer", "Full Stack Developer", "Cloud Infrastructure", "Network Architecture", "React", "Next.js", "TypeScript", "Proxmox", "pfSense"],
+  keywords: ["Software Engineer", "Full Stack Developer", "Cloud Infrastructure", "Network Architecture", "React", "Next.js", "TypeScript", "Proxmox", "pfSense", "JavaScript", "Node.js", "Web Development", "DevOps", "Homelab"],
   authors: [{ name: "Alexander Phillipson" }],
   creator: "Alexander Phillipson",
+  publisher: "Alexander Phillipson",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -59,6 +66,34 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  alternates: {
+    canonical: "https://alexphillipson.com",
+  },
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alexander Phillipson",
+  url: "https://alexphillipson.com",
+  jobTitle: "Software Engineer",
+  description: "Software engineer specializing in full-stack development, cloud infrastructure, and network architecture",
+  knowsAbout: [
+    "Software Engineering",
+    "Full Stack Development",
+    "Cloud Infrastructure",
+    "Network Architecture",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Proxmox",
+    "pfSense",
+  ],
+  sameAs: [
+    "https://github.com/LegitKnots",
+  ],
 }
 
 export default function RootLayout({
@@ -68,6 +103,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-background">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased bg-background`}>
         <Suspense fallback={<div>Loading...</div>}>
           <Navigation />
