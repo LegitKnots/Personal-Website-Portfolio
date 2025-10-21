@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { SimpleExperienceCard, MultiPositionExperienceCard } from "@/components/experience-card";
 import { Download, Briefcase, GraduationCap, Wrench } from "lucide-react";
 
 export default function ResumePage() {
@@ -28,188 +29,100 @@ export default function ResumePage() {
 
             <div className="space-y-6">
               {/* DataBank */}
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground leading-tight">
-                      Data Center Technician
-                    </h3>
-                    <p className="text-primary font-medium">DataBank - Atlanta, GA | On-Site</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-                    Nov 2025 – Present
-                  </span>
-                </div>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Monitoring data center environmental systems, power distribution, and facility operations to ensure optimal performance.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Assisting with hardware troubleshooting and providing support for server installations and basic maintenance tasks.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Supporting remote hands operations for customers and maintaining compliance with data center procedures and standards.</span>
-                  </li>
-                </ul>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Facilities Monitoring</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Equipment Support</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Data Center Ops</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Troubleshooting</span>
-                </div>
-              </Card>
+              <SimpleExperienceCard
+                title="Data Center Technician"
+                company="DataBank"
+                location="Atlanta, GA | On-Site"
+                dates="Nov 2025 – Present"
+                descriptions={[
+                  "Monitoring data center environmental systems, power distribution, and facility operations to ensure optimal performance.",
+                  "Assisting with hardware troubleshooting and providing support for server installations and basic maintenance tasks.",
+                  "Supporting remote hands operations for customers and maintaining compliance with data center procedures and standards."
+                ]}
+                skills={["Facilities Monitoring", "Equipment Support", "Data Center Ops", "Troubleshooting"]}
+              />
 
               {/* EchoFives */}
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground leading-tight">
-                      Chief Technology Officer | Lead of Software Operations
-                    </h3>
-                    <p className="text-primary font-medium">EchoFives, LLC - Atlanta, GA | Hybrid</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-                    Sep 2025 – Present
-                  </span>
-                </div>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Leading development of scalable web and mobile applications for small businesses.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Designing infrastructure with cloud services, containerization, and secure APIs.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Overseeing product roadmap, technical decisions, and business strategy alongside the CEO.</span>
-                  </li>
-                </ul>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">React</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Node.js</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">TypeScript</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Linode</span>
-                </div>
-              </Card>
+              <MultiPositionExperienceCard
+                companyName="EchoFives, LLC"
+                companyLocation="Atlanta, GA | Hybrid"
+                companyDates="Sep 2025 – Present"
+                positions={[
+                  {
+                    title: "Lead of Software Operations",
+                    dates: "Sep 2025 – Present",
+                    descriptions: [
+                      "Leading development of scalable web and mobile applications for small businesses.",
+                      "Designing infrastructure with cloud services, containerization, and secure APIs."
+                    ],
+                    skills: ["React", "Node.js", "TypeScript"]
+                  },
+                  {
+                    title: "Chief Technology Officer",
+                    dates: "Sep 2025 – Present",
+                    descriptions: [
+                      "Overseeing product roadmap, technical decisions, and business strategy alongside the CEO.",
+                      "Driving the company's overall technology strategy and execution for scalable growth."
+                    ],
+                    skills: ["Strategy", "Leadership", "Linode"]
+                  }
+                ]}
+              />
 
               {/* CycleGear */}
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground leading-tight">
-                      Sales Associate | Key Holder
-                    </h3>
-                    <p className="text-primary font-medium">CycleGear – Smyrna, GA</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-                    May 2025 – Present
-                  </span>
-                </div>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Provided customer service and sales support specializing in motorcycle gear and accessories.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Assisted customers with product selection, fitment, and safety guidance while meeting sales goals.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Performed key holder responsibilities including opening/closing procedures, cash handling, and store security.</span>
-                  </li>
-                </ul>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Customer Service</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Retail Sales</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Teamwork</span>
-                </div>
-              </Card>
+              <MultiPositionExperienceCard
+                companyName="CycleGear"
+                companyLocation="Smyrna, GA"
+                companyDates="May 2025 – Present"
+                positions={[
+                  {
+                    title: "Key Holder | CycleGear",
+                    dates: "Sep 2025 – Present",
+                    descriptions: [
+                      "Performed key holder responsibilities including opening/closing procedures, cash handling, and store security.",
+                      "Assisted with training new associates and maintained store operations during manager absence."
+                    ],
+                    skills: ["Leadership", "Store Operations"]
+                  },
+                  {
+                    title: "Sales Associate | CycleGear",
+                    dates: "May 2025 – Present",
+                    descriptions: [
+                      "Provided customer service and sales support specializing in motorcycle gear and accessories.",
+                      "Assisted customers with product selection, fitment, and safety guidance while meeting sales goals."
+                    ],
+                    skills: ["Customer Service", "Retail Sales", "Teamwork"]
+                  }
+                ]}
+              />
 
               {/* West Chatham Warning Devices */}
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground leading-tight">
-                      Installation Technician
-                    </h3>
-                    <p className="text-primary font-medium">West Chatham Warning Devices – Alpharetta, GA</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-                    Apr 2024 – Mar 2025
-                  </span>
-                </div>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      Installed and configured emergency vehicle lighting, sirens, communication systems, camera systems,
-                      and K9/prisoner transport cages.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Worked in a fast-paced shop environment performing complete upfitting according to safety standards.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>Conducted troubleshooting, diagnostics, and repairs to ensure reliable system performance.</span>
-                  </li>
-                </ul>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Electronics</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Troubleshooting</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Wiring</span>
-                </div>
-              </Card>
+              <SimpleExperienceCard
+                title="Installation Technician"
+                company="West Chatham Warning Devices"
+                location="Alpharetta, GA"
+                dates="Apr 2024 – Mar 2025"
+                descriptions={[
+                  "Installed and configured emergency vehicle lighting, sirens, communication systems, camera systems, and K9/prisoner transport cages.",
+                  "Worked in a fast-paced shop environment performing complete upfitting according to safety standards.",
+                  "Conducted troubleshooting, diagnostics, and repairs to ensure reliable system performance."
+                ]}
+                skills={["Electronics", "Troubleshooting", "Wiring"]}
+              />
 
               {/* AJP Networks */}
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground leading-tight">
-                      Chief Executive Officer | Software Development & Operations
-                    </h3>
-                    <p className="text-primary font-medium">AJP Networks – Atlanta, GA | Hybrid</p>
-                  </div>
-                  <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-                    Jan 2023 – Jan 2024
-                  </span>
-                </div>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      Contracted to develop custom software solutions tailored for client needs, delivering robust and
-                      reliable systems.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      Designed and implemented an integrated software + hardware system for a critical data entry and
-                      processing project with Elevate Solutions Group and CooperVision.
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span>
-                      Managed day-to-day business operations including finances, tax preparation, client communications,
-                      and marketing support.
-                    </span>
-                  </li>
-                </ul>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Full-Stack Dev</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Business Ops</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Client Relations</span>
-                </div>
-              </Card>
+              <SimpleExperienceCard
+                title="Chief Executive Officer | Software Development & Operations"
+                company="AJP Networks"
+                location="Atlanta, GA | Hybrid"
+                dates="Jan 2023 – Jan 2024"
+                descriptions={[
+                  "Contracted to develop custom software solutions tailored for client needs, delivering robust and reliable systems.",
+                  "Designed and implemented an integrated software + hardware system for a critical data entry and processing project with Elevate Solutions Group and CooperVision.",
+                  "Managed day-to-day business operations including finances, tax preparation, client communications, and marketing support."
+                ]}
+                skills={["Full-Stack Dev", "Business Ops", "Client Relations"]}
+              />
             </div>
           </div>
 
