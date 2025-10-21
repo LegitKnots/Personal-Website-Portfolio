@@ -1,62 +1,62 @@
-import { Card } from "@/components/ui/card"
+import { SoftwareProjectCard, HardwareProjectCard } from "@/components/project-card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Server, Code } from "lucide-react"
+import { Github, Server, Code, DollarSign, Wrench, Music, HardDrive, Network, Shield } from "lucide-react"
 import Link from "next/link"
 
 const softwareProjects = [
   {
-    title: "E-Commerce Platform",
+    title: "WageWise",
     description:
-      "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern web technologies for optimal performance.",
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    image: "/modern-ecommerce-dashboard.png",
+      "Comprehensive wage and time tracking application designed to help employees and freelancers manage their work hours, calculate earnings, and track payment schedules efficiently.",
+    tags: ["TypeScript", "Time Tracking", "Finance", "Web App"],
+    github: "https://github.com/LegitKnots/WageWise",
+    demo: null,
+    icon: DollarSign,
   },
   {
-    title: "Real-Time Chat Application",
+    title: "API Tester",
     description:
-      "Scalable chat application with WebSocket support, user authentication, and message encryption. Supports group chats and file sharing.",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    image: "/chat-application-interface.png",
+      "Developer tool for testing and debugging RESTful APIs. Features request building, response inspection, and endpoint testing to streamline API development and integration workflows.",
+    tags: ["JavaScript", "API", "Developer Tools", "Testing"],
+    github: "https://github.com/LegitKnots/APITester",
+    demo: null,
+    icon: Wrench,
   },
   {
-    title: "Task Management System",
+    title: "YouTube Music Puller",
     description:
-      "Collaborative project management tool with kanban boards, time tracking, and team collaboration features. Designed for remote teams.",
-    tags: ["Vue.js", "Express", "Redis", "Docker"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-    image: "/kanban-board-project-management.jpg",
+      "Automated tool for extracting and downloading music content from YouTube. Streamlines the process of building music libraries with batch processing capabilities.",
+    tags: ["Python", "YouTube API", "Automation", "Media"],
+    github: "https://github.com/LegitKnots/YouTube-Music-Puller",
+    demo: null,
+    icon: Music,
   },
 ]
 
 const hardwareProjects = [
   {
-    title: "Home Lab Server Cluster",
+    title: "Consolidated Proxmox Server",
     description:
-      "Multi-node Proxmox cluster running various services including media server, NAS, home automation, and development environments. Features automated backups and monitoring.",
-    tags: ["Proxmox", "Docker", "Kubernetes", "TrueNAS"],
-    specs: "3x Dell R720, 192GB RAM total, 40TB storage",
-    image: "/server-rack-datacenter.jpg",
+      "Single consolidated server running Proxmox as the host OS, managing multiple VMs and containers for all projects and services. Hosts Node.js applications, Nextcloud for file sync, Immich for photo management, and a dedicated AI VM running local LLMs for development and experimentation.",
+    tags: ["Proxmox", "Docker", "LXC", "AI/LLM", "Nextcloud", "Immich"],
+    specs: "AMD Ryzen 7 3700X | 64GB Corsair LPX RAM | RTX 3080 | 8x 4TB SAS (RAIDZ2) | Samsung 970 EVO Plus Cache | Dual Crucial M550 Boot | LSI SAS Card | TP-Link 10GbE | Rackowl 4U Chassis",
+    icon: HardDrive,
   },
   {
-    title: "Network Infrastructure",
+    title: "Home Network Infrastructure",
     description:
-      "Enterprise-grade home network with VLANs, pfSense firewall, managed switches, and UniFi access points. Includes network monitoring and security features.",
-    tags: ["pfSense", "UniFi", "VLANs", "Networking"],
-    specs: "pfSense router, 3x managed switches, 4x APs",
-    image: "/network-equipment-switches.jpg",
+      "Enterprise-grade home network with segmented VLANs for IoT, personal devices, and server infrastructure. Features pfSense firewall with 10GbE connectivity to UniFi switch aggregation, cascading to PoE switch for access points and standard devices. ATT Fiber with IP passthrough provides the WAN connection. Strict firewall rules isolate IoT devices while allowing controlled access to server VLAN.",
+    tags: ["pfSense", "UniFi", "VLANs", "10GbE", "SFP+", "WireGuard"],
+    specs: "Protectli FW4C (upgraded 16GB RAM, Samsung 870 EVO) | UniFi Switch Aggregation (8-port SFP+) | USW-16-PoE | UAP-AC-PRO | ATT Fiber",
+    icon: Network,
   },
   {
-    title: "Raspberry Pi Cluster",
+    title: "Cloud Security Gateway",
     description:
-      "Kubernetes cluster built with Raspberry Pi 4s for learning and experimentation. Runs containerized applications and CI/CD pipelines.",
-    tags: ["Raspberry Pi", "K3s", "ARM", "IoT"],
-    specs: "6x Raspberry Pi 4 (8GB), custom cooling",
-    image: "/raspberry-pi-cluster-computing.jpg",
+      "Cloud-hosted pfSense router serving as a secure public gateway for home services. Runs Suricata IDS/IPS for threat detection, HAProxy for intelligent traffic routing, and automated Let's Encrypt SSL certificate management with ACME. WireGuard VPN tunnel back to home network with strict IP allowlist ensures only authorized traffic reaches internal servers.",
+    tags: ["pfSense", "Suricata", "HAProxy", "WireGuard", "Let's Encrypt", "Cloud Security"],
+    specs: "Cloud-hosted pfSense | Suricata IDS/IPS | HAProxy Load Balancer | ACME/LE SSL | WireGuard VPN",
+    icon: Shield,
   },
 ]
 
@@ -83,43 +83,15 @@ export default function ProjectsPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {softwareProjects.map((project, index) => (
-                <Card
+                <SoftwareProjectCard
                   key={index}
-                  className="overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5"
-                >
-                  <div className="aspect-video bg-muted overflow-hidden">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-balance">{project.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag) => (
-                        <span key={tag} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-3">
-                      <Button size="sm" variant="outline" asChild className="flex-1 bg-transparent">
-                        <Link href={project.github} target="_blank">
-                          <Github size={16} className="mr-2" />
-                          Code
-                        </Link>
-                      </Button>
-                      <Button size="sm" asChild className="flex-1 bg-primary hover:bg-primary/90">
-                        <Link href={project.demo} target="_blank">
-                          <ExternalLink size={16} className="mr-2" />
-                          Demo
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
-                </Card>
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  github={project.github}
+                  demo={project.demo}
+                  icon={project.icon}
+                />
               ))}
             </div>
           </div>
@@ -133,35 +105,31 @@ export default function ProjectsPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {hardwareProjects.map((project, index) => (
-                <Card
+                <HardwareProjectCard
                   key={index}
-                  className="overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5"
-                >
-                  <div className="aspect-video bg-muted overflow-hidden">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-balance">{project.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{project.description}</p>
-                    <div className="mb-4">
-                      <p className="text-xs text-muted-foreground font-mono bg-secondary/50 p-2 rounded">
-                        {project.specs}
-                      </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span key={tag} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  specs={project.specs}
+                  icon={project.icon}
+                />
               ))}
+            </div>
+          </div>
+
+          {/* Footer with Website Source Code Link */}
+          <div className="mt-20 pt-12 border-t border-border">
+            <div className="flex flex-col items-center gap-4 text-center">
+              <h3 className="text-xl font-semibold">Want to see how this site was built?</h3>
+              <p className="text-muted-foreground max-w-2xl">
+                This portfolio website is built with Next.js, TypeScript, and Tailwind CSS. Check out the source code on GitHub!
+              </p>
+              <Button variant="outline" asChild className="gap-2">
+                <Link href="https://github.com/LegitKnots/Personal-Website-Portfolio" target="_blank">
+                  <Github size={20} />
+                  View Website Source Code
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
