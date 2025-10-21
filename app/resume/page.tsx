@@ -134,7 +134,9 @@ export default function ResumePage() {
             </div>
 
             <div className="space-y-6">
-              <Card className="p-6 hover:border-primary/50 transition-colors">
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-3">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground leading-tight">
@@ -150,6 +152,7 @@ export default function ResumePage() {
                   Graduated with a high school diploma. Focused on understanding the basics of software engineering
                   throughout.
                 </p>
+                </div>
               </Card>
             </div>
           </div>
@@ -162,47 +165,71 @@ export default function ResumePage() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Server Hardware</h3>
-                <p className="text-sm text-muted-foreground">
-                  Building, upgrading, and maintaining reliable server systems for both production and lab environments.
-                </p>
+              {/* Server Hardware - Gradient */}
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Server Hardware</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Building, upgrading, and maintaining reliable server systems for both production and lab environments.
+                  </p>
+                </div>
               </Card>
 
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Racking & Cabling</h3>
-                <p className="text-sm text-muted-foreground">
-                  Organizing rack layouts and structured cabling for efficient, scalable, and professional data center
-                  setups.
-                </p>
+              {/* Racking & Cabling - Gradient */}
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Racking & Cabling</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Organizing rack layouts and structured cabling for efficient, scalable, and professional data center
+                    setups.
+                  </p>
+                </div>
               </Card>
 
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Troubleshooting</h3>
-                <p className="text-sm text-muted-foreground">
-                  Diagnosing and resolving hardware, software, and network issues under pressure to minimize downtime.
-                </p>
+              {/* Troubleshooting - Gradient */}
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Troubleshooting</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Diagnosing and resolving hardware, software, and network issues under pressure to minimize downtime.
+                  </p>
+                </div>
               </Card>
 
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Networking & Security</h3>
-                <p className="text-sm text-muted-foreground">
-                  Configuring switches, firewalls, and secure VPNs to ensure performance, reliability, and protection.
-                </p>
+              {/* Networking & Security - Gradient */}
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Networking & Security</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Configuring switches, firewalls, and secure VPNs to ensure performance, reliability, and protection.
+                  </p>
+                </div>
               </Card>
 
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Virtualization</h3>
-                <p className="text-sm text-muted-foreground">
-                  Deploying and managing virtual machines and clusters for efficient resource utilization and flexibility.
-                </p>
+              {/* Virtualization - Gradient */}
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Virtualization</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Deploying and managing virtual machines and clusters for efficient resource utilization and flexibility.
+                  </p>
+                </div>
               </Card>
 
-              <Card className="p-6 hover:border-primary/50 transition-colors">
-                <h3 className="text-lg font-semibold text-foreground mb-2">Monitoring</h3>
-                <p className="text-sm text-muted-foreground">
-                  Implementing system and network monitoring to detect issues early and maintain high availability.
-                </p>
+              {/* Monitoring - Gradient */}
+              <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+                <div className="relative">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Monitoring</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Implementing system and network monitoring to detect issues early and maintain high availability.
+                  </p>
+                </div>
               </Card>
             </div>
           </div>

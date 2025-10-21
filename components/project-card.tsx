@@ -32,7 +32,7 @@ export function SoftwareProjectCard({
 }: SoftwareProjectProps) {
   return (
     <Card className="group relative overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5 p-6">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full transition-all group-hover:w-40 group-hover:h-40"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
       <div className="relative">
         <div className="mb-4">
           <Icon className="text-primary mb-3" size={32} />
@@ -77,7 +77,7 @@ export function HardwareProjectCard({
 }: HardwareProjectProps) {
   return (
     <Card className="group relative overflow-hidden hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5 p-6">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full transition-all group-hover:w-40 group-hover:h-40"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
       <div className="relative">
         <div className="mb-4">
           <Icon className="text-primary mb-3" size={32} />

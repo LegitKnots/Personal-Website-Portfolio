@@ -191,62 +191,86 @@ export default function AboutPage() {
       </h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-          <h3 className="text-lg font-semibold text-primary mb-4">Frontend</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>React / Next.js</li>
-            <li>React Native</li>
-            <li>TypeScript</li>
-            <li>Tailwind CSS</li>
-          </ul>
+        {/* Frontend - Gradient */}
+        <div className="group relative overflow-hidden p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-primary mb-4">Frontend</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>React / Next.js</li>
+              <li>React Native</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-          <h3 className="text-lg font-semibold text-primary mb-4">Backend</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Node.js / Express</li>
-            <li>Firebase (Firestore & Auth)</li>
-            <li>REST APIs</li>
-          </ul>
+        {/* Backend - Gradient */}
+        <div className="group relative overflow-hidden p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-primary mb-4">Backend</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Node.js / Express</li>
+              <li>Firebase (Firestore & Auth)</li>
+              <li>REST APIs</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-          <h3 className="text-lg font-semibold text-primary mb-4">DevOps & Tools</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Docker</li>
-            <li>Git / GitHub</li>
-            <li>Linux Systems</li>
-            <li>Homelab Management</li>
-          </ul>
+        {/* DevOps - Gradient */}
+        <div className="group relative overflow-hidden p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-primary mb-4">DevOps & Tools</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Docker</li>
+              <li>Git / GitHub</li>
+              <li>Linux Systems</li>
+              <li>Homelab Management</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-          <h3 className="text-lg font-semibold text-primary mb-4">Hardware & Networking</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Server Hardware</li>
-            <li>Racking & Cabling</li>
-            <li>pfSense</li>
-            <li>Proxmox & Virtualization</li>
-          </ul>
+        {/* Hardware - Gradient */}
+        <div className="group relative overflow-hidden p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-primary mb-4">Hardware & Networking</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Server Hardware</li>
+              <li>Racking & Cabling</li>
+              <li>pfSense</li>
+              <li>Proxmox & Virtualization</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-          <h3 className="text-lg font-semibold text-primary mb-4">Cloud</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Linode</li>
-            <li>Firebase Hosting</li>
-            <li>Cloud Architecture</li>
-          </ul>
+        {/* Cloud - Gradient */}
+        <div className="group relative overflow-hidden p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-primary mb-4">Cloud</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Linode</li>
+              <li>Firebase Hosting</li>
+              <li>Cloud Architecture</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-          <h3 className="text-lg font-semibold text-primary mb-4">Other</h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Troubleshooting</li>
-            <li>Monitoring</li>
-            <li>Problem Solving</li>
-            <li>Team Collaboration</li>
-          </ul>
+        {/* Other - Gradient */}
+        <div className="group relative overflow-hidden p-6 rounded-lg bg-card/50 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-primary mb-4">Other</h3>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Troubleshooting</li>
+              <li>Monitoring</li>
+              <li>Problem Solving</li>
+              <li>Team Collaboration</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
