@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 const navItems = [
   { href: "/", label: "About" },
@@ -22,9 +23,9 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="text-xl font-bold text-foreground hover:text-primary transition-colors duration-300"
+            className="flex items-center hover:opacity-80 transition-opacity duration-300"
           >
-            Alexander Phillipson
+            <Image src="/icon.svg" alt="AP" width={40} height={40} className="w-10 h-10" />
           </Link>
 
           {/* Desktop Navigation */}
