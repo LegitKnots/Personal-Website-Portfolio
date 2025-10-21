@@ -9,7 +9,7 @@ import { Suspense } from "react"
 
 export const metadata: Metadata = {
   title: {
-    default: "Alexander Phillipson | Software Engineer & Infrastructure Specialist",
+    default: "Alexander Phillipson | Software Engineer & Hardware Enthusiast",
     template: "%s | Alexander Phillipson",
   },
   description: "Software engineer specializing in full-stack development, cloud infrastructure, and network architecture. Explore my projects, experience, and technical expertise.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://alexphillipson.com",
     siteName: "Alexander Phillipson",
-    title: "Alexander Phillipson | Software Engineer & Infrastructure Specialist",
+    title: "Alexander Phillipson | Software Engineer & Hardware Enthusiast",
     description: "Software engineer specializing in full-stack development, cloud infrastructure, and network architecture.",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexander Phillipson | Software Engineer & Infrastructure Specialist",
+    title: "Alexander Phillipson | Software Engineer & Hardware Enthusiast",
     description: "Software engineer specializing in full-stack development, cloud infrastructure, and network architecture.",
     images: ["/og-image.png"],
   },
