@@ -8,7 +8,7 @@ const softwareProjects = [
     title: "WageWise",
     description:
       "Comprehensive wage and time tracking application designed to help employees and freelancers manage their work hours, calculate earnings, and track payment schedules efficiently.",
-    tags: ["TypeScript", "Time Tracking", "Finance", "Web App"],
+    tags: ["TypeScript", "Time Tracking", "Finance", "Mobile App"],
     github: "https://github.com/LegitKnots/WageWise",
     demo: null,
     icon: DollarSign,
@@ -17,7 +17,7 @@ const softwareProjects = [
     title: "API Tester",
     description:
       "Developer tool for testing and debugging RESTful APIs. Features request building, response inspection, and endpoint testing to streamline API development and integration workflows.",
-    tags: ["JavaScript", "API", "Developer Tools", "Testing"],
+    tags: ["TypeScript", "API", "Dev Tools", "Testing", "Mobile App"],
     github: "https://github.com/LegitKnots/APITester",
     demo: null,
     icon: Wrench,
@@ -26,7 +26,7 @@ const softwareProjects = [
     title: "YouTube Music Puller",
     description:
       "Automated tool for extracting and downloading music content from YouTube. Streamlines the process of building music libraries with batch processing capabilities.",
-    tags: ["Python", "YouTube API", "Automation", "Media"],
+    tags: ["TypeScript", "YouTube API", "Automation", "Media"],
     github: "https://github.com/LegitKnots/YouTube-Music-Puller",
     demo: null,
     icon: Music,
@@ -38,7 +38,7 @@ const hardwareProjects = [
     title: "Consolidated Proxmox Server",
     description:
       "Single consolidated server running Proxmox as the host OS, managing multiple VMs and containers for all projects and services. Hosts Node.js applications, Nextcloud for file sync, Immich for photo management, and a dedicated AI VM running local LLMs for development and experimentation.",
-    tags: ["Proxmox", "Docker", "LXC", "AI/LLM", "Nextcloud", "Immich"],
+    tags: ["Proxmox", "RAID", "Docker", "LXC", "AI/LLM", "PM2"],
     specs: "AMD Ryzen 7 3700X | 64GB Corsair LPX RAM | RTX 3080 | 8x 4TB SAS (RAIDZ2) | Samsung 970 EVO Plus Cache | Dual Crucial M550 Boot | LSI SAS Card | TP-Link 10GbE | Rackowl 4U Chassis",
     icon: HardDrive,
   },
@@ -47,7 +47,7 @@ const hardwareProjects = [
     description:
       "Enterprise-grade home network with segmented VLANs for IoT, personal devices, and server infrastructure. Features pfSense firewall with 10GbE connectivity to UniFi switch aggregation, cascading to PoE switch for access points and standard devices. ATT Fiber with IP passthrough provides the WAN connection. Strict firewall rules isolate IoT devices while allowing controlled access to server VLAN.",
     tags: ["pfSense", "UniFi", "VLANs", "10GbE", "SFP+", "WireGuard"],
-    specs: "Protectli FW4C (upgraded 16GB RAM, Samsung 870 EVO) | UniFi Switch Aggregation (8-port SFP+) | USW-16-PoE | UAP-AC-PRO | ATT Fiber",
+    specs: "Protectli FW4C (upgraded 16GB RAM, Samsung 870 EVO) | USW-Aggregation (8-port SFP+) | USW-16-PoE | UAP-AC-PRO | ATT Fiber",
     icon: Network,
   },
   {
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
           {/* Software Projects */}
           <div className="mb-20">
             <div className="flex items-center gap-3 mb-8">
-              <Code className="text-primary" size={28} />
+              <Code className="text-primary mt-1" size={28} />
               <h2 className="text-3xl font-bold">Software Projects</h2>
             </div>
 
@@ -99,7 +99,7 @@ export default function ProjectsPage() {
           {/* Hardware Projects */}
           <div>
             <div className="flex items-center gap-3 mb-8">
-              <Server className="text-primary" size={28} />
+              <Server className="text-primary mt-1" size={28} />
               <h2 className="text-3xl font-bold">Hardware Projects</h2>
             </div>
 
