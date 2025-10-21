@@ -73,18 +73,20 @@ export function SimpleExperienceCard({
   skills,
 }: SimpleExperienceProps) {
   return (
-    <Card className="p-6 hover:border-primary/50 transition-colors">
-      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
-        <div>
-          <h3 className="text-xl font-semibold text-foreground leading-tight">
-            {title}
-          </h3>
-          <p className="text-primary font-medium">{company} - {location}</p>
+    <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+      <div className="relative">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-4">
+          <div>
+            <h3 className="text-xl font-semibold text-foreground leading-tight">
+              {title}
+            </h3>
+            <p className="text-primary font-medium">{company} - {location}</p>
+          </div>
+          <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
+            {dates}
+          </span>
         </div>
-        <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-          {dates}
-        </span>
-      </div>
       <ul className="space-y-2 text-muted-foreground">
         {descriptions.map((desc, index) => (
           <li key={index} className="flex items-start gap-2">
@@ -100,6 +102,7 @@ export function SimpleExperienceCard({
           </span>
         ))}
       </div>
+      </div>
     </Card>
   );
 }
@@ -112,31 +115,34 @@ export function MultiPositionExperienceCard({
   positions,
 }: MultiPositionExperienceProps) {
   return (
-    <Card className="p-6 hover:border-primary/50 transition-colors">
-      {/* Company Header */}
-      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-6">
-        <div>
-          <h3 className="text-xl font-semibold text-foreground leading-tight">
-            {companyName}
-          </h3>
-          <p className="text-primary font-medium">{companyLocation}</p>
+    <Card className="group relative overflow-hidden p-6 hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/5">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-accent/10 opacity-20 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110"></div>
+      <div className="relative">
+        {/* Company Header */}
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 mb-6">
+          <div>
+            <h3 className="text-xl font-semibold text-foreground leading-tight">
+              {companyName}
+            </h3>
+            <p className="text-primary font-medium">{companyLocation}</p>
+          </div>
+          <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
+            {companyDates}
+          </span>
         </div>
-        <span className="text-sm text-muted-foreground whitespace-nowrap sm:text-right shrink-0">
-          {companyDates}
-        </span>
-      </div>
 
-      {/* Positions */}
-      <div className="space-y-6">
-        {positions.map((position, index) => (
-          <PositionItem
-            key={index}
-            title={position.title}
-            dates={position.dates}
-            descriptions={position.descriptions}
-            skills={position.skills}
-          />
-        ))}
+        {/* Positions */}
+        <div className="space-y-6">
+          {positions.map((position, index) => (
+            <PositionItem
+              key={index}
+              title={position.title}
+              dates={position.dates}
+              descriptions={position.descriptions}
+              skills={position.skills}
+            />
+          ))}
+        </div>
       </div>
     </Card>
   );
