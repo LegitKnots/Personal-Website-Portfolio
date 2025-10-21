@@ -25,7 +25,7 @@ const softwareProjects = [
   {
     title: "YouTube Music Puller",
     description:
-      "Automated tool for extracting and downloading music content from YouTube. Streamlines the process of building music libraries with batch processing capabilities.",
+      "Automated tool for extracting and downloading music content from YouTube. Streamlines the process of converting music libraries with batch processing capabilities.",
     tags: ["TypeScript", "YouTube API", "Automation", "Media"],
     github: "https://github.com/LegitKnots/YouTube-Music-Puller",
     demo: null,
