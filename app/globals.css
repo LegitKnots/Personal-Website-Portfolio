@@ -124,6 +124,11 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: oklch(0.18 0.01 240);
+}
+
+html.dark {
+  background-color: oklch(0.18 0.01 240);
 }
 
 @keyframes fade-in-up {

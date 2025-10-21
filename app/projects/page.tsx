@@ -1,5 +1,6 @@
 import { SoftwareProjectCard, HardwareProjectCard } from "@/components/project-card"
 import { Button } from "@/components/ui/button"
+import { Footer } from "@/components/footer"
 import { Github, Server, Code, DollarSign, Wrench, Music, HardDrive, Network, Shield } from "lucide-react"
 import Link from "next/link"
 
@@ -63,8 +64,10 @@ const hardwareProjects = [
 export default function ProjectsPage() {
   return (
     <div className="pt-16">
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute -top-1/2 -right-1/2 w-3/4 h-3/4 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header */}
           <div className="mb-16 animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">Projects</h1>
@@ -134,6 +137,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }
