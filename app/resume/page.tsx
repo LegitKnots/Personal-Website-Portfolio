@@ -76,11 +76,11 @@ export default function ResumePage() {
               <ExperienceCard
                 company="CycleGear"
                 location="Smyrna, GA"
-                dates="May 2025 – Present"
+                dates="May 2025 – May 2026"
                 positions={[
                   {
                     title: "Key Holder",
-                    dates: "Sep 2025 – Present",
+                    dates: "Sep 2025 – May 2026",
                     descriptions: [
                       "Performed key holder responsibilities including opening/closing procedures, cash handling, and store security.",
                       "Assisted with training new associates and maintained store operations during manager absence."
@@ -89,7 +89,7 @@ export default function ResumePage() {
                   },
                   {
                     title: "Sales Associate",
-                    dates: "May 2025 – Present",
+                    dates: "May 2025 – May 2026",
                     descriptions: [
                       "Provided customer service and sales support specializing in motorcycle gear and accessories.",
                       "Assisted customers with product selection, fitment, and safety guidance while meeting sales goals."
